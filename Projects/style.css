@@ -1,38 +1,38 @@
+     
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* -------variables----- */
+/* ------------------- Variables ------------------------ */
 
 :root{
-    /* test colours */
-    --text-grey:#808291;
-    --text-white:#f8f9fa;
-    --text-light:#f6f6f6;
-    --text-dark:#1a3260;
-    --text-dark2:#1a3760d4;
-    --text-red:#ff4d6d;
-    --box-shadow: 0px 0px 50px 0px rgb(0 0 0 /10%);
-    --bg-blue:rgb(249,243,255);
-    --bg-red: rgb(254,247,252);
-    --bg-yellow: rgb(255,255,246);
-    --bg-purple: rgb(246,255,255);
+    /* text colors */
+    --text-gray : #808291;
+    --text-white: #f8f9fa;
+    --text-light: #f6f6f6;
+    --text-dark : #1A3260;
+    --text-dark2 : #1A3760D4;
+    --text-red : #ff4d6d;
+    --box-shadow: 0px 0px 50px 0px rgb(0 0 0 / 10%);
+    --bg-blue: rgb(249, 243, 255);
+    --bg-red: rgb(254, 247, 252);
+    --bg-yellow:rgb(255, 255, 246);
+    --bg-purple: rgb(246, 255, 255);
 
-    /* font family */
-    --font-poppins: "Poppins", 'sans-serif';
+    /* font familiy */
+    --font-poppins : "Poppins", 'sans-serif';
 
-    /* gradient colours */
-    --bg-gradient: linear-gradient(to right,#ff512f,#dd2476);
-    --bg-gradient-indigo: linear-gradient(to right,#8e2de2,#4a00e0);
-    --bg-gradient-peach: linear-gradient(to right,#fff7f3,#fff7f3);
+    /* gradient colors */
+    --bg-gradient : linear-gradient(to right, #ff512f, #dd2476); 
+    --bg-gradient-indigo: linear-gradient(to right, #8e2de2, #4a00e0);
+    --bg-gradient-peach: linear-gradient(to right, #fff7f3, #fff7f3);
 
     /* images */
-    --bg-cover:url('./assets/bgimg1.png');
-    --bg-image1:url('./assets/img1.png');
-    --bg-image2:url('./assets/img2.png');
-    --bg-image3:url('./assets/img3.png');
+    --bg-cover : url('./assets/bgimg1.png');
+    --bg-image1: url('./assets/img1.png');
+    --bg-image2: url('./assets/img2.png');
+    --bg-image3: url('./assets/img3.png');
 }
 
-/* applying changes to all the decendents elements */
-* > *{
+* > * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -43,11 +43,13 @@ a{
 }
 
 ul{
-    list-style: none;
+    list-style-type: none;
 }
-/* -------/variables----- */
 
-/* ------ Global Classes ----- */
+
+/* ------------------- /Variables ------------------------ */
+
+/* ------------------- Global Classes ------------------------ */
 
 .text-dark{
     color: var(--text-dark);
@@ -62,7 +64,7 @@ ul{
 }
 
 .text-gray{
-    color: var(--text-grey);
+    color: var(--text-gray);
 }
 
 .text-red{
@@ -90,7 +92,7 @@ ul{
 }
 
 .bg-gradient-yellow{
-    background: var(--bg-yellow);    
+    background: var(--bg-yellow);
 }
 
 .bg-gradient-purple{
@@ -111,12 +113,12 @@ ul{
 }
 
 .text-md{
-    font-size: 1.5em;    
+    font-size: 1.5em;
 }
 
 .text-lg{
     font-size: 2.2em;
-    line-height: 3em;
+    line-height: 3rem;
 }
 
 .text-xl{
@@ -144,7 +146,7 @@ ul{
 }
 
 .flex-wrap{
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .flex-initial{
@@ -223,7 +225,7 @@ ul{
     font-weight: bold;
 }
 
-.btn-shadow{
+.btn-shodow{
     box-shadow: var(--box-shadow);
 }
 
@@ -236,7 +238,7 @@ ul{
     object-fit: fill;
 }
 
-.d-inline{
+.d-iniine{
     display: inline-block;
 }
 
@@ -249,7 +251,7 @@ ul{
 }
 
 .cols-1{
-    grid-template-columns: repeat(1,minmax(0,1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .w-100{
@@ -260,15 +262,76 @@ ul{
     width: 50%;
 }
 
-/* ------ /Global Classes ----- */
+
+/* ------------------- /Global Classes ------------------------ */
+
+/* ------------------- Media Query ------------------------ */
+
+/* for large screen sm (640px) */
+@media (min-width: 640px) {
+    .container{
+        max-width: 640px;
+    }
+}
+
+/* for large screen md (768px) */
+@media (min-width: 768px) {
+    .container{
+        max-width: 768px;
+    }
+}
+
+/* for large screen lg (1024px) */
+@media (min-width: 1024px) {
+    .container{
+        max-width: 1024px;
+    }
+
+    #nav .toggle-btn > button{
+        display: none;
+    }
+
+    #nav{
+        flex-direction: row !important;
+    }
+
+    .collapse{
+        max-height: initial !important;
+    }
+
+    .collapse ul{
+        flex-direction: row !important;
+    }
+
+    .active{
+        max-height: 100% !important;
+    }
+
+}
+
+/* for large screen xl (1280px) */
+@media (min-width: 1280px) {
+    .container{
+        max-width: 1280px;
+    }
+
+    #nav{
+        background: transparent !important;
+    }
+
+    #nav .flex-initial ul button{
+        display: inline-block !important;
+    }
+
+}
+
+/* ------------------- /Media Query ------------------------ */
 
 
-/* ------ Navigation Style----- */
-
+/* ------------------- Navigation Style ------------------------ */
 #nav{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
     width: 100%;
     padding: 1rem 1.5rem;
     background: var(--text-light);
@@ -278,27 +341,25 @@ ul{
 #nav .collapse{
     max-height: 0px;
     overflow-y: hidden;
-    transition: all 0.9s;
+    transition: all 0.9s ease;
 }
 
 #nav .collapse ul{
     flex-direction: column;
     text-align: center;
     padding: 0 3rem;
-    
 }
 
-#nav .collapse ul > li{    
-    padding: 0.15 rem;
-    line-height: 3rem;
-    font-size: 1.1em;
+#nav .collapse ul > li{
+   padding: 0 1.5rem;
+   line-height: 3rem;
+   font-size: 1.1em;
 }
 
-#nav .toggle-btn > button{  
+#nav .toggle-btn > button{
     font-size: 2em;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 0; top: 0;
     padding: 1rem;
     color: var(--text-dark2);
 }
@@ -311,4 +372,5 @@ ul{
     max-height: 50vh !important;
 }
 
-/* ------ /Navigation Style----- */
+
+/* ------------------- /Navigation Style ------------------------ */
