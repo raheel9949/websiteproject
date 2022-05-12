@@ -25,10 +25,10 @@
     --bg-gradient-peach: linear-gradient(to right, #fff7f3, #fff7f3);
 
     /* images */
-    --bg-cover : url('./assets/bgimg1.png');
-    --bg-image1: url('./assets/img1.png');
-    --bg-image2: url('./assets/img2.png');
-    --bg-image3: url('./assets/img3.png');
+    --bg-cover : url('./bgimg1.png');
+    --bg-image1: url('./img1.png');
+    --bg-image2: url('./img2.png');
+    --bg-image3: url('./img3.png');
 }
 
 * > * {
@@ -266,21 +266,49 @@ ul{
 
 /* ------------------- Media Query ------------------------ */
 
-/* for large screen sm (640px) */
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    .container{
+        max-width: 480px;
+        text-align: center;
+    }
+    .branding{
+        color: var(--text-light);
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    }
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        
+        .title{
+            
+            display: none;
+        }
+    }
+
+/* for screen sm (640px) */
 @media (min-width: 640px) {
     .container{
         max-width: 640px;
+        
     }
 
     .sm-text-xl{
-        font-size: 3em;
+        font-size: 3em;                             
     }
+
+   
 }
 
-/* for large screen md (768px) */
+/* for  screen md (768px) */
 @media (min-width: 768px) {
     .container{
         max-width: 768px;
+    }
+
+    .md-text-left{
+        text-align: left;
     }
 }
 
@@ -310,13 +338,22 @@ ul{
         max-height: 100% !important;
     }
 
+    .lg-cols-2{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lg-cols-3{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
 }
 
 /* for large screen xl (1280px) */
 @media (min-width: 1280px) {
     .container{
-        max-width: 1280px;
+        max-width: 1280px;        
     }
+
 
     #nav{
         background: transparent !important;
@@ -324,8 +361,9 @@ ul{
 
     #nav .flex-initial ul button{
         display: inline-block !important;
-    }
+    } 
 
+   
 }
 
 /* ------------------- /Media Query ------------------------ */
@@ -395,3 +433,57 @@ ul{
 }
 
 /* ------------------- /Banner area Style ------------------------ */
+
+
+/* ------------------- agency area Style ------------------------ */
+#site-main .agency-area{
+    padding: 5em 0;
+}
+/* ------------------- /agency area Style ------------------------ */
+
+
+/* ------------------- digital life area Style ------------------------ */
+
+#site-main .life-area > .grid{
+    column-gap: 10em;
+}
+
+#site-main .life-area .grid-images{
+    display: grid;
+    grid-template-columns: repeat(16, minmax(10px, 1fr));
+    grid-template-rows: repeat(8, minmax(100px, 1fr));
+}
+
+#site-main .life-area .grid-images .item-one{
+    background: var(--text-gray);
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background: var(--bg-image1) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+
+#site-main .life-area .grid-images .item-two{
+    background: var(--text-gray);
+    grid-column-start: 9;
+    grid-column-end: 16;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: var(--bg-image2) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+
+#site-main .life-area .grid-images .item-three{
+    grid-area: 3 / 4 / 8 / 14;
+    background: var(--bg-image3) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    z-index: 99;
+}
+
+/* ------------------- /digital life area Style ------------------------ */
